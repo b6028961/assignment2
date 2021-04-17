@@ -1,0 +1,36 @@
+<div class="container">
+<h1> Add New Product </h1>
+<%= form_for :product, url: products_path do |f| %>
+<div class="form-group">
+<%= f.label :pName %>
+<%= f.text_field :pName %>
+</div>
+<div class="form-group">
+<%= f.label :pBrand %>
+<%= f.text_field :pBrand %>
+</div>
+<div class="form-group">
+<%= f.label :pCost %>
+<%= f.number_field :pCost %>
+</div>
+<div class="form-group">
+<%= f.label :pCategory %>
+<%= f.text_field :pCategory %>
+</div>
+<div class="form-group">
+<%= f.label :pDate %>
+<%= f.date_field :pDate %>
+</div>
+<div class="form-group">
+<%= f.label :pDescription %>
+<%= f.text_field :pDescription %>
+</div>
+<div class="form-group">
+<%= f.label :pPhoto %>
+<%= f.text_field :pPhoto %>
+</div>
+<div class="form-group">
+<%= f.submit %>
+</div>
+<% end %>
+</div>
