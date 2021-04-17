@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pName: MyString
+  pBrand: MyString
+  pCost: 1
+  pCategory: MyString
+  pDate: 2021-04-17 18:02:29
+  pDescription: MyString
+  pPhoto: MyString
+
+two:
+  pName: MyString
+  pBrand: MyString
+  pCost: 1
+  pCategory: MyString
+  pDate: 2021-04-17 18:02:29
+  pDescription: MyString
+  pPhoto: MyString

@@ -1,0 +1,26 @@
+<div class="container">
+<h2> Products Available </h2>
+<table border="1" class="table">
+<tr>
+<th>Product Name</th>
+<th>Product Brand</th>
+<th>Product Cost</th>
+<th>Product Category</th>
+<th>Product Date</th>
+<th>Product Description</th>
+<th>Product Photo</th>
+</tr>
+<% @products.each do |product| %>
+<tr>
+<td> <%= product.pName %> </td>
+<td> <%= product.pBrand %> </td>
+<td> <%= product.pCost %> </td>
+<td> <%= product.pCategory %> </td>
+<td> <%= product.pDate %> </td>
+<td> <%= product.pDescription %> </td>
+<td> <%= product.pPhoto %> </td>
+<td> <%= link_to 'Product Page', product_path(product) %> </td>
+</tr>
+<% end %>
+</table>
+</div>
