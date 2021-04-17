@@ -1,0 +1,25 @@
+<div class="container">
+<h2> Profiles Available </h2>
+<table border="1" class="table">
+<tr>
+<th>Name</th>
+<th>DateofBirth</th>
+<th>Address</th>
+<th>City</th>
+<th>Country</th>
+<th>Photo</th>
+</tr>
+<% @profiles.each do |profile| %>
+<tr>
+<td> <%= profile.Name %> </td>
+<td> <%= profile.DoB %> </td>
+<td> <%= profile.Address %> </td>
+<td> <%= profile.City %> </td>
+<td> <%= profile.Country %> </td>
+<td> <%= profile.Photo %> </td>
+<td> <%= link_to 'Profile Page', profile_path(profile) %> </td>
+<td> <%= link_to 'Edit Profile', edit_profile_path(profile) %> </td>
+</tr>
+<% end %>
+</table>
+</div>

@@ -1,12 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  ProfileId: 1
+  ProductId: 1
   Author: MyString
   ProductRating: 1
   ReviewText: MyString
   DateofReview: 2021-04-17
 
 two:
+  ProfileId: 1
+  ProductId: 1
   Author: MyString
   ProductRating: 1
   ReviewText: MyString

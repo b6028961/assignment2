@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_17_193648) do
+ActiveRecord::Schema.define(version: 2021_04_17_203725) do
 
   create_table "products", charset: "utf8mb4", force: :cascade do |t|
     t.string "pName"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 2021_04_17_193648) do
   end
 
   create_table "reviews", charset: "utf8mb4", force: :cascade do |t|
+    t.integer "ProfileId"
+    t.integer "ProductId"
     t.string "Author"
     t.integer "ProductRating"
     t.string "ReviewText"
