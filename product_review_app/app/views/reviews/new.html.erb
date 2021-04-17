@@ -1,0 +1,24 @@
+<div class="container">
+<h1> Add New Review </h1>
+<%= form_for :review, url: reviews_path do |f| %>
+<div class="form-group">
+<%= f.label :"Review Author" %>
+<%= f.text_field :Author %>
+</div>
+<div class="form-group">
+<%= f.label :"Product Rating" %>
+<%= f.number_field :ProductRating %>
+</div>
+<div class="form-group">
+<%= f.label :"Review Text"%>
+<%= f.text_field :ReviewText %>
+</div>
+<div class="form-group">
+<%= f.label :"Date of Review" %>
+<%= f.date_field :DateofReview %>
+</div>
+<div class="form-group">
+<%= f.submit %>
+</div>
+<% end %>
+</div>

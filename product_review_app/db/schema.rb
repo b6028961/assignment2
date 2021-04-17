@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_17_170229) do
+ActiveRecord::Schema.define(version: 2021_04_17_193648) do
 
   create_table "products", charset: "utf8mb4", force: :cascade do |t|
     t.string "pName"
@@ -20,6 +20,26 @@ ActiveRecord::Schema.define(version: 2021_04_17_170229) do
     t.datetime "pDate"
     t.string "pDescription"
     t.string "pPhoto"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "profiles", charset: "utf8mb4", force: :cascade do |t|
+    t.string "Name"
+    t.date "DoB"
+    t.string "Address"
+    t.string "City"
+    t.string "Country"
+    t.string "Photo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", charset: "utf8mb4", force: :cascade do |t|
+    t.string "Author"
+    t.integer "ProductRating"
+    t.string "ReviewText"
+    t.date "DateofReview"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

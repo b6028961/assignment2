@@ -1,0 +1,32 @@
+<div class="container">
+<h1> Add New Profile </h1>
+<%= form_for :profile, url: profiles_path do |f| %>
+<div class="form-group">
+<%= f.label :"Profile Name" %>
+<%= f.text_field :Name %>
+</div>
+<div class="form-group">
+<%= f.label :"Date of Birth" %>
+<%= f.date_field :DoB %>
+</div>
+<div class="form-group">
+<%= f.label :"Address"%>
+<%= f.text_field :Address %>
+</div>
+<div class="form-group">
+<%= f.label :"City" %>
+<%= f.text_field :City %>
+</div>
+<div class="form-group">
+<%= f.label :"Country" %>
+<%= f.text_field :Country %>
+</div>
+<div class="form-group">
+<%= f.label :"Photo" %>
+<%= f.text_field :Photo %>
+</div>
+<div class="form-group">
+<%= f.submit %>
+</div>
+<% end %>
+</div>
