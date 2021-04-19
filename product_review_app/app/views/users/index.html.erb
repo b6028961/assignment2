@@ -1,0 +1,20 @@
+<div class="container"?
+<h2> Registered Users </h2>
+<table border="1" class="table">
+<tr>
+<th>UserId</th>
+<th>Email</th>
+</tr>
+<% @users.each do |user| %>
+<tr>
+<td> <%= user.UserId %> </td>
+<td> <%= user.Email %> </td>
+<td> <%= link_to 'User Page', user_path(user) %> </td>
+<td> <%= link_to 'Edit User', edit_user_path(user) %> </td>
+<td> <%= link_to 'Delete User', user_path(user),
+method: :Delete,
+data: {confirm: "Are you sure you want to delete this User?"} %> </td>
+</tr>
+<% end %>
+</table>
+</div>

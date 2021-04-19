@@ -28,8 +28,17 @@
         <a class="p-2 text-dark" href="#"><%=link_to "Show All Profiles", profiles_path %></a>
         <a class="p-2 text-dark" href="#"><%=link_to "Add New Review", new_review_path %></a>
         <a class="p-2 text-dark" href="#"><%=link_to "Show All Reviews", reviews_path %></a>
-
-       
+        <a class="p-2 text-dark" href="#"><%=link_to "Create New User", new_user_path %></a>
+        <a class="p-2 text-dark" href="#"><%=link_to "Show All Users", users_path %></a>
+        <% if current_user %>
+          <a class="p-2 text-dark" href="#">
+          <%= link_to 'Log out', session_path('active'), method: :delete %>
+          </a>
+         else
+            <a class="p-2 text-dark" href="#">
+            <%= link_to 'Log in', new_session_path, class: "active_nav_link" %>
+            </a>
+            <% end %>
       </nav>
 
       

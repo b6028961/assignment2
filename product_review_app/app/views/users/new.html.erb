@@ -1,0 +1,31 @@
+<div class="container">
+<h1> Add New User </h1>
+<%= form_for :user, url: users_path do |f| %>
+<div class="field" style="100%">
+<% if @user.errors.any? %>
+    <div id="error_explanation">
+    <h2>
+    <%= pluralize(@user.errors.count, "error") %>
+</h2>
+<p>
+    <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+                <li>
+                    <%= msg %>
+                </li>
+    </ul>
+    <% end %>
+</p>
+<% if alert %>
+            <%= alert %>
+            <% end %>
+        </div>
+    <% end %>
+<%= f.text_field :UserId, placeholder: 'Enter a Username', class: 'form-control' %>
+<%= f.email_field :Email, placeholder: 'Enter Your Email', class: 'form-control' %>
+<%= f.password_field :password, placeholder: 'Create a Password', class: 'form-control' %>
+<%= f.password_field :password_confirmation, placeholder: 'Confirm Your Password', class: 'form-control' %>
+<%= f.submit 'Create Account' %>
+<% end %>
+</div>
+</div>
