@@ -1,6 +1,8 @@
 <div class="container">
 <h3>User Details</h3>
 
-<p>UserID: <%= @user.UserId %> </p>
+<p>User ID: <%= @user.UserId %> </p>
 <p>Email: <%= @user.Email %> </p>
+<br />
+<%= link_to 'Edit User', edit_user_path(@user) %> 
 </div>

@@ -6,12 +6,18 @@ class ProductsController < ApplicationController
     end
     def show
         @product=Product.find(params[:id])
+        @reviews=@product.reviews
     end
     def create
        # render plain: params[:product] .inspect
        @product=Product.new(product_params)
        @product.save
        redirect_to @product
+    end
+    def destroy
+        @product = Product.find(params[:id])
+        @product.destroy
+        redirect_to products_path
     end
     def search
         @products = if params[:term]

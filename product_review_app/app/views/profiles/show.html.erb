@@ -2,9 +2,14 @@
 <h3>Profile Details</h3>
 
 <p>Name: <%= @profile.Name %> </p>
-<p>DateofBirth: <%= @profile.DoB %> </p>
+<p>Date of Birth: <%= @profile.DoB %> </p>
 <p>Address: <%= @profile.Address %> </p>
 <p>City: <%= @profile.City %> </p>
 <p>Country: <%= @profile.Country %> </p>
 <p>Photo: <%= @profile.Photo %> </p>
+
+<%= link_to 'Edit Profile', edit_profile_path(@profile) %> </br >
+
 </div>
+
+

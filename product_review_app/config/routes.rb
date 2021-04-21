@@ -3,9 +3,8 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'static_pages/about'
   get 'static_pages/contact'
-  get 'home/about'
-  get 'home/contact'
-  #get 'products/new'
+  resources :contacts
+  resources :password_resets
   resources :sessions
   resources :users do
     collection do

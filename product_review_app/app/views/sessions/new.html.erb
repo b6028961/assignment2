@@ -1,8 +1,11 @@
 <div class="container">
-<h2>Please Login</h2>
+<h1>Please Login</h1>
 <%= form_tag sessions_path do %>
 <%= text_field_tag :UserId, nil, placeholder: 'Enter Your Username', class: 'form-control' %>
 <%= text_field_tag :password, nil, placeholder: 'Enter Your Password', class: 'form-control' %>
 <%= submit_tag 'Log In' %>
+<%= link_to 'Forgot Password?', new_password_reset_path %> <br />
+
+<p>Not a member? Join <a class="p-2 text-dark" href="#"><%=link_to "here", new_user_path %></a></p>
 <% end %>
 </div>

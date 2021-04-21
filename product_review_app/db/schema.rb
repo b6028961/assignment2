@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_19_195839) do
+ActiveRecord::Schema.define(version: 2021_04_21_150636) do
+
+  create_table "contacts", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "products", charset: "utf8mb4", force: :cascade do |t|
     t.string "pName"
@@ -53,6 +61,8 @@ ActiveRecord::Schema.define(version: 2021_04_19_195839) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_reset_token"
+    t.datetime "password_reset_sent_at"
   end
 
 end

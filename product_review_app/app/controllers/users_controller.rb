@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            redirect_to reviews_path, notice:
+            redirect_to new_profile_path, notice:
             "Welcome #{@user.UserId}! to Product Review App"
         else
             render 'new'

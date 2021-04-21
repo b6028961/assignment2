@@ -3,7 +3,7 @@
     <%= text_field_tag :term, nil, placeholder: 'Search Products', class: 'form-control' %>
     <%= submit_tag "Search", class: 'btn btn-default' %> 
     <% end %>
-<h2> Products Available </h2>
+<h1> Products Available </h1>
 <table border="1" class="table">
 <tr>
 <th>Product Name</th>
@@ -17,10 +17,10 @@
 <% @products.each do |product| %>
 <tr>
 <td> <%= product.pName %> </td>
-<td> <%= product.pBrand %> </td>
-<td> <%= product.pCost %> </td>
-<td> <%= product.pCategory %> </td>
-<td> <%= product.pDate %> </td>
+<td align="center"> <%= product.pBrand %> </td>
+<td align="center"> <%= product.pCost %> </td>
+<td align="center"> <%= product.pCategory %> </td>
+<td align="center"> <%= product.pDate %> </td>
 <td> <%= product.pDescription %> </td>
 <td> <%= product.pPhoto %> </td>
 <td> <%= link_to 'Product Page', product_path(product) %> </td>

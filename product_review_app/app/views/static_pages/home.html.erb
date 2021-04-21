@@ -1,11 +1,25 @@
 <div class="container">
- <h1 class="jumbotron-heading">Album example</h1>
+ <h1 class="jumbotron-heading">Martin & Son Reviews Homepage</h1>
 <div class="container">
  <div class="row">
  <div class="col">
  <p> </p>
  </div>
  <div class="col">
- <p> TEST YOOOOO</p>
+
+ <table border="6" class="table">
+ <tr>
+ <th width ="200">Your Profile</th>
+ <th width ="200">About Us</th>
+ <th width ="200">Contact Us</th>
+ <th width ="200">Products</th>
+ </tr>
+ <tr>
+ <td><%= link_to image_tag("profile.png", :alt => "Image"), profiles_path %></td>
+ <td><%= link_to image_tag("about.jpg", :alt => "Image"), static_pages_about_path %></td>
+ <td><%= link_to image_tag("contact.jpg", :alt => "Image"), new_contact_path %></td>
+ <td><%= link_to image_tag("product.png", :alt => "Image"), products_path %></td>
+ </tr>
+ </table>
  </div>
  </div></div>

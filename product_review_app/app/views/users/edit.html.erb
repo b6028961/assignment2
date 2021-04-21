@@ -21,9 +21,9 @@
             <% end %>
         </div>
     <% end %>
-<%= f.text_field :UserId, placeholder: 'Enter a Username', class: 'form-control' %>
-<%= f.email_field :Email, placeholder: 'Enter Your Email', class: 'form-control' %>
-<%= f.password_field :password, placeholder: 'Create a Password', class: 'form-control' %>
+<%= f.text_field :UserId, placeholder: 'Enter New Username', class: 'form-control' %>
+<%= f.email_field :Email, placeholder: 'Enter New Email', class: 'form-control' %>
+<%= f.password_field :password, placeholder: 'Change Your Password', class: 'form-control' %>
 <%= f.password_field :password_confirmation, placeholder: 'Confirm Your Password', class: 'form-control' %>
 <%= f.submit 'Edit Account' %>
 <% end %>

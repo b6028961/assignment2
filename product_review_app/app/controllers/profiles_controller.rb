@@ -18,7 +18,11 @@ class ProfilesController < ApplicationController
     def set_profile
         @profile = Profile.find(params[:id])
     end
-
+    def destroy
+        @profile = Profile.find(params[:id])
+        @profile.destroy
+        redirect_to profiles_path
+    end
     def show
         @profile=Profile.find(params[:id])
     end

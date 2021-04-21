@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProductReviewApp</title>
+    <title>Martin & Son Reviews</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,34 +11,37 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="background-color:powderblue">
   <div class="container">
 
    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
 
-      <h5 class="my-0 mr-md-auto font-weight-normal"> Product Reviews</h5>
+      <h5 class="my-0 mr-md-auto font-weight-normal"> Martin & Son Reviews</h5>
 
       <nav class="my-2 my-md-0 mr-md-3">
 
-
-        <a class="p-2 text-dark" href="#"><%=link_to "Home", '#' %></a>
-        <a class="p-2 text-dark" href="#"><%=link_to "Add New Product", new_product_path %></a>
-        <a class="p-2 text-dark" href="#"><%=link_to "Show All Products", products_path %></a>
-        <a class="p-2 text-dark" href="#"><%=link_to "Add New Profile", new_profile_path %></a>
-        <a class="p-2 text-dark" href="#"><%=link_to "Show All Profiles", profiles_path %></a>
-        <a class="p-2 text-dark" href="#"><%=link_to "Add New Review", new_review_path %></a>
-        <a class="p-2 text-dark" href="#"><%=link_to "Show All Reviews", reviews_path %></a>
-        <a class="p-2 text-dark" href="#"><%=link_to "Create New User", new_user_path %></a>
-        <a class="p-2 text-dark" href="#"><%=link_to "Show All Users", users_path %></a>
+      
+        <a class="p-2 text-dark" href="#"><%=link_to "Home", static_pages_home_path %></a> &nbsp; &nbsp; &nbsp; &nbsp;   
+        <a class="p-2 text-dark" href="#"><%=link_to "Products", products_path %></a>     &nbsp; &nbsp; &nbsp; &nbsp;
+        <a class="p-2 text-dark" href="#"><%=link_to "About Us", static_pages_about_path %></a>     &nbsp; &nbsp; &nbsp; &nbsp;
+        <a class="p-2 text-dark" href="#"><%=link_to "Contact Us", new_contact_path %></a>  
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
         <% if current_user %>
           <a class="p-2 text-dark" href="#">
-          <%= link_to 'Log out', session_path('active'), method: :delete %>
+          <%= link_to 'Log out', session_path('active'), method: :delete %> &nbsp; &nbsp; &nbsp; &nbsp;
+          <%= link_to 'Your Account', users_path %>
           </a>
-         else
+          <% end %>
+          <% if !current_user %>
             <a class="p-2 text-dark" href="#">
             <%= link_to 'Log in', new_session_path, class: "active_nav_link" %>
             </a>
             <% end %>
+            
       </nav>
 
       
